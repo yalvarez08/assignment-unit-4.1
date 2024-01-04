@@ -31,10 +31,14 @@ console.log('addNumbers function using 10 & 5:', addNumbers(10, 5));
 
 
 // 4. Function to multiply three numbers & return the result
-function multiplyThree() {
-
+function multiplyThree(num0, num1, num2) {
+let answer = num0 * num1 * num2;
+return answer;
 }
-
+//call the function
+console.log('multiplyThree function using 2, 4, & 8:', multiplyThree(2, 4, 8));
+console.log('multiplyThree function using 6, 11, & 45:', multiplyThree(6, 11, 45));
+console.log('multiplyThree function using 15.5, 3, & 24:', multiplyThree(15.5, 3, 24));
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise

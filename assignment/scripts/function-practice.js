@@ -44,13 +44,16 @@ console.log('multiplyThree function using 15.5, 3, & 24:', multiplyThree(15.5, 3
 //    or greater than zero, and false otherwise
 function isPositive(number) {
   if (number > 0) {
-    return;
+    return true;
+  } else {
+    return false;
   }
-  return;
 }
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
-
+console.log('Input number 4. Outcome should be true.', isPositive(4));
+console.log('Input number -13. Outcome should be false.', isPositive(-13));
+console.log('Input number 121. Outcome should be true.', isPositive(121));
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.

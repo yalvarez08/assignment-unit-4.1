@@ -58,20 +58,19 @@ console.log('Input number 121. Outcome should be true.', isPositive(121));
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-let firstArr = getLast(10, 9, 8, 7, 6);
-let secondArr = getLast(-18, 0, 47, 23);
-let thirdArr = getLast['van', 'motorcycle', 'sedan'];
-let fourthArr = getLast();
-let lastItem = array[array.length - 1];
 
 function getLast(array) {
+  let lastItem = array[array.length - 1];
   if (array.length > 0) {
-    return lastItem;
-  } if (array.length === null){
-    console.log('Sorry, array is empty.');
+    return 'last item is', lastItem;
+  } if (array.length === 0) {
     return 'undefined.';
   }
 }
+let firstArr = getLast(10, 9, 8, 7, 6);
+let secondArr = getLast(-18, 0, 47, 23);
+let thirdArr = getLast('van', 'motorcycle', 'sedan');
+let fourthArr = getLast('');
 
 console.log('last item in this array:', firstArr);
 console.log('last item in this array:', secondArr);
@@ -81,9 +80,22 @@ console.log('last item in this array:', fourthArr);
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find(value, array) {
 
+function find(value, array) {
+  for(let i=0, len=value.length; i < len; i++){
+    if(value[i]===array){
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
+let arrOne= find('3, 6');
+let arrTwo= find(8, 16);
+
+console.log(arrOne);
+console.log(arrTwo);
+
 
 // ----------------------
 // Stretch Goals

@@ -18,7 +18,7 @@ function helloName(name) {
   return 'Hello, '+ name;
 }
 // Remember to call the function to test
-let greeting = helloName('Yailene');
+let greeting = helloName ('Yailene');
 console.log(greeting + '!');
 
 // 3. Function to add two numbers together & return the result
@@ -67,10 +67,10 @@ function getLast(array) {
     return 'undefined.';
   }
 }
-let firstArr = getLast(10, 9, 8, 7, 6);
-let secondArr = getLast(-18, 0, 47, 23);
-let thirdArr = getLast('van', 'motorcycle', 'sedan');
-let fourthArr = getLast('');
+let firstArr = getLast([10, 9, 8, 7, 6]);
+let secondArr = getLast([-18, 0, 47, 23]);
+let thirdArr = getLast(['van', 'motorcycle', 'sedan']);
+let fourthArr = getLast([]);
 
 console.log('last item in this array:', firstArr);
 console.log('last item in this array:', secondArr);
@@ -80,22 +80,22 @@ console.log('last item in this array:', fourthArr);
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
+let numArray = [20, 40, 60, 80, 100];
 
 function find(value, array) {
-  for(let i=0, len=value.length; i < len; i++){
-    if(value[i]===array){
+  
+  for (let i = 0; i < array.length; i++){
+    let num = array[i];
+    if(num===value){
       return true;
-    } else {
-      return false;
-    }
+    } 
   }
+  return false;
 }
-let arrOne= find('3, 6');
-let arrTwo= find(8, 16);
 
-console.log(arrOne);
-console.log(arrTwo);
-
+console.log(find(50, numArray));
+console.log(find(100, numArray));
+console.log(find(60, numArray));
 
 // ----------------------
 // Stretch Goals

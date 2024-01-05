@@ -63,8 +63,8 @@ function getLast(array) {
   let lastItem = array[array.length - 1];
   if (array.length > 0) {
     return 'last item is', lastItem;
-  } if (array.length === 0) {
-    return 'undefined.';
+  } else (array.length === 0); {
+    return undefined;
   }
 }
 let firstArr = getLast([10, 9, 8, 7, 6]);

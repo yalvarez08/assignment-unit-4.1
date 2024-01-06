@@ -69,7 +69,7 @@ function getLast(array) {
 }
 let firstArr = getLast([10, 9, 8, 7, 6]);
 let secondArr = getLast([-18, 0, 47, 23]);
-let thirdArr = getLast(['van', 'motorcycle', 'sedan']);
+let thirdArr = getLast([64, 38, 2, -14]);
 let fourthArr = getLast([]);
 
 console.log('last item in this array:', firstArr);
@@ -103,8 +103,21 @@ console.log(find(60, numArray));
 // 8. Function to check if a letter is the first letter in a 
 //    string. Return true if it is, and false otherwise
 function isFirstLetter(letter, string) {
-
+  if (string.includes(letter, 0)){
+    return true;
+  } else {
+    return false;
+  }
 }
+
+let cityOne = isFirstLetter('s', 'seattle');
+let cityTwo = isFirstLetter('d', 'toronto');
+let cityThree = isFirstLetter('m', 'miami');
+console.log('check if s is first letter in seattle:', cityOne);
+console.log('check if d is first letter in toronto:', cityTwo);
+console.log('check if m is first letter in miami:', cityThree);
+
+
 
 
 // 9. Function to return the sum of all numbers in an array
